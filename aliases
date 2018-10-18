@@ -1,0 +1,74 @@
+# Administration
+alias s="sudo -i"
+alias h='cd ~'
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+# Directory
+alias desk='cd ~/Desktop'
+alias me='cd ~/Code'
+
+# Git
+alias ga="git add"
+alias gaa="git add ."
+alias gc="git commit -m"
+alias gp="git push"
+alias gpush="git push"
+alias gpull="git pull"
+alias gs="git status"
+alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias glog="git log"
+alias gd="git diff"
+alias gcom="git checkout master"
+alias nah="git reset --hard && git clean -df"
+alias amend="git commit --amend --no-edit && git push -f"
+gz()
+{
+    echo $1
+    git add .
+    git commit -m "$1"
+    git pull
+}
+gzz()
+{
+    echo $1
+    git add .
+    git commit -m "$1"
+    git pull
+    git push
+}
+
+# Laravel
+alias artisan="php artisan"
+alias art="php artisan"
+alias phpspec='vendor/bin/phpspec'
+alias phpunit='vendor/bin/phpunit'
+alias serve='serve-laravel'
+alias p="phpunit"
+alias pf="phpunit --filter "
+alias migrate="php artisan migrate"
+alias fresh="php artisan migrate:fresh --seed"
+alias lang="php artisan translations:reset && php artisan translations:import && php artisan translations:export '*'"
+alias logger="tail -f storage/logs/*"
+
+# Vagrant
+alias vu="vagrant up"
+alias vup="vagrant up & vagrant ssh"
+alias vs="vagrant ssh"
+alias vss="vagrant suspend"
+alias vr="vagrant reload"
+alias vp="vagrant provision"
+alias vd="vagrant destroy"
+
+# Weather
+alias wetter="curl de.wttr.in/Langenfeld"
+
+# Various
+alias localip="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'"
+alias ip="curl icanhazip.com"
+
+
+
