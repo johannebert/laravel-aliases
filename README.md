@@ -1,4 +1,4 @@
-# Laravel Bash Aliases [![Software License][ico-license]](LICENSE)
+# Laravel & Git Aliases [![Software License][ico-license]](LICENSE)
 
 Copy [aliases](aliases) file to your system to **.aliases** 
 
